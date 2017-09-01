@@ -66,4 +66,33 @@
         Return lafecha
 
     End Function
+    Function validardia(dd, mm, aa) As Boolean
+        Dim ultimeses(12), aux1, aux2 As Integer
+        ultimeses(1) = 31
+        ultimeses(2) = 28
+        ultimeses(3) = 31
+        ultimeses(4) = 30
+        ultimeses(5) = 31
+        ultimeses(6) = 30
+        ultimeses(7) = 31
+        ultimeses(8) = 31
+        ultimeses(9) = 30
+        ultimeses(10) = 31
+        ultimeses(11) = 30
+        ultimeses(12) = 31
+        aux1 = (aa / 4)
+        aux2 = aux1 * 4
+
+        If (aa = aux2) Then
+            ultimeses(2) = 29
+        Else
+            ultimeses(2) = 28
+        End If
+        If (dd > 0 And dd <= ultimeses(mm)) Then
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
 End Module
