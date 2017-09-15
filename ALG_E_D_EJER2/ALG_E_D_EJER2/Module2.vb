@@ -1,4 +1,5 @@
 ﻿Module Module2
+    Dim a As Integer = 1
     Function ordenar(l, opcion) As Array 'FUNCION QUE ORDENA DESCENDENTEMENTE o ASCENDENTEMENTE UNA LISTA DE NOMBRES
 
         Dim a, b As Integer
@@ -32,7 +33,6 @@
 
     End Function
     Public Sub mostrar(l()) 'PROCEDIMIENTO QUE MUESTRA LA LISTA DE NOMBRES  
-        Dim a As Integer
         a = 1
         Do While a < 101
 
@@ -46,7 +46,7 @@
         Loop
     End Sub
     Public Sub agregar(l())
-        Dim a As Integer = 1
+        a = 1
         Console.WriteLine("INGRESE LOS VALORES A ORDENAR")
         Do While a < 101
             Console.Write(Str(a) + "-----> ")
