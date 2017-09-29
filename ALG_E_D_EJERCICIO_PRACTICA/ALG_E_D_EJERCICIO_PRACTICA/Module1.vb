@@ -1,13 +1,29 @@
 ﻿Module Module1
 
     Sub Main()
-        Dim tamaño As String
+        Dim tamanio, a, x As Integer
         Console.Write("INDIQUE EL TAMAÑO DE LA VARIABLE INDEXADA A VERIFICAR ====> ")
-        tamaño = Console.ReadLine()
+        tamanio = Console.ReadLine()
 
-        Dim lista(tamaño) As String
+        Dim lista(tamanio) As String
+        a = 1
+        Do While a < tamanio + 1
+            Console.Write("INGRESE EL VALOR " + Str(a) + " DE LA LISTA : ")
+            lista(a) = Console.ReadLine
+            If lista(a) = "" Then
+                a = 21
 
+            End If
+            a = a + 1
+        Loop
 
+        borrar_repetidos(lista, tamanio)
+
+        x = 1
+        Do While x < 11
+            Console.WriteLine(lista(x))
+            x = x + 1
+        Loop
 
         '*******CODIGO BASE
         ', valorre, burbuja As String
