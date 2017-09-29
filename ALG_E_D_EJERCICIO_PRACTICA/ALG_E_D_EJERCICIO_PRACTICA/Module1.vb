@@ -1,10 +1,8 @@
 ﻿Module Module1
 
     Sub Main()
-        Dim lista(10), valorre As String
-        Dim listalimpia(10) As String
-
-        Dim x, y, c, g As Integer
+        Dim lista(10), valorre, burbuja As String
+        Dim x, y, c As Integer
 
         lista(1) = "bb"
         lista(2) = "bb"
@@ -19,31 +17,28 @@
         x = 1
         y = 2
         c = 1
-        g = 1
-        Do Until x = 11
-            Do Until y = 11
-                If lista(x) = lista(y) And lista(y) <> "" Then
-                    valorre = lista(y)
+        Do Until x = 10
+            Do Until y = 11 Or lista(x) = ""
+                If lista(x) = lista(y) Then
                     lista(y) = ""
-
+                    c = y
+                    Do While c <> 10
+                        burbuja = lista(c)
+                        lista(c) = lista(c + 1)
+                        lista(c + 1) = burbuja
+                        c = c + 1
+                    Loop
                 End If
-                y = y + 1
+                If lista(x) <> lista(y) Then
+                    y = y + 1
+                End If
             Loop
             x = x + 1
             y = x + 1
         Loop
-        c = 1
-
-        Do Until c = 11
-            If lista(c) <> "" Then
-                listalimpia(g) = lista(c)
-                g = g + 1
-            End If
-            c = c + 1
-        Loop
         x = 1
         Do While x < 11
-            Console.WriteLine(listalimpia(x))
+            Console.WriteLine(lista(x))
             x = x + 1
         Loop
         Console.ReadLine()
