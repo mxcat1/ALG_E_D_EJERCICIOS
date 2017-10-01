@@ -22,7 +22,7 @@
             a = a + 1
             b = a + 1
         Loop
-        lista = ordenar(lista, "D", tamanio)
+        lista = ordenar(lista, "A", tamanio)
         Return lista
     End Function
 End Module

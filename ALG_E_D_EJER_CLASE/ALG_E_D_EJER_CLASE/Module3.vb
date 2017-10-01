@@ -7,9 +7,9 @@
         b = 2
 
         Do Until a = n_datos
-            Do Until b = n_datos
+            Do Until b = n_datos + 1
                 If opcion = "A" Or opcion = "a" Then
-                    If (l(a) > l(b) And l(a) <> "") Or l(b) = "" Then
+                    If (l(a) > l(b) And l(b) <> "") Or l(a) = "" Then
                         t = l(a)
                         l(a) = l(b)
                         l(b) = t
